@@ -113,6 +113,28 @@
     Object     // A collection of key-value pairs represented by { a: 1, b: 2, ... }
     Array      // A collection of values indexed by non-negative integers starting at 0. Represented by [0, 1, 2, 3, 4]
     Function   // A type of object used to define reusable blocks of code
+
+
+
+    // This is the calculation code from the first session
+    let op = ''
+    let num1 = 0
+    let num2 = 0
+
+    if(op == '+') {
+      console.log(num1 + num2)
+    } else if(op == '-') {
+      console.log(num1 - num2)
+    } else if(op == '*') {
+      console.log(num1 * num2)
+    } else if(op == '/') {
+      // If num2 is 0 (resulting in division by 0), there will be an error. To combat this issue, this if statement is used
+      if(num2 == 0) {
+        console.log('You cannot divide by 0!')
+      } else {
+        console.log(num1 / num2)
+      }
+    }
   </script>
 </body>
 </html>

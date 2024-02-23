@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Console is like a folder with many functions and properties in it.
+    // Log is one of these functions
+    // Inside the parentheses there is a 'string' which is text. This is a parameter.
+    console.log('Hello World!')
+
+    // This is a variable defined by let. Its value is initialized as text, which is a string.
+    let myVariable = 'text'
+
+    // This is a constant initialized with const as 15, a number. This cannot be changed
+    const myConstant = 15
+
+    // This will output whether or not myVariable is equal to myConstant (true or false).
+    console.log(myVariable == myConstant) // false
+
+    // This will change the value of myVariable to 20. This cannot be done to myConstant because it is constant and cannot be changed.
+    myVariable = 20
+
+    // This will log true or false based on whether or not myVariable is greater than myConstant.
+    console.log(myVariable > myConstant) // true
+
+    // Other comparison operators are:
+    // <   - less than
+    // >   - greater than
+    // ==  - equal to
+    // !=  - not equal to
+    // <=  - less than or equal to
+    // >=  - greater than or equal to
+
+    // Will increase myVariable by 3
+    myVariable = myVariable + 3
+    console.log(myVariable) // 23
+
+    // Other arithmatic operators are:
+    //  -  - minus
+    //  /  - division
+    //  *  - multiplication
+    //  +  - addition
+
+    // To increment or decrement a value by one, you can use ++ or --
+    myVariable++  // Plus 1
+    myVariable--  // Minus 1
+
+    // To change a variable by a specific amount, you can use -=, +=, *=, and /=
+    myVariable -= 5  // Minus 5
+    myVariable += 5  // Plus 5
+    myVariable *= 5  // Times 5
+    myVariable /= 5  // Divided by 5
+
+    // An if statement will run the code in the 'if' part of it if the input is true.
+    // Otherwise, the 'else' part will run. Having an else is optional.
+    // In this example, it will be true if myVariable divided by 2 is less than or equal to myConstant
+    if((myVariable / 2) <= myConstant) {
+      console.log('It was true')
+    } else {
+      console.log('It was false')
+    }
+
+    // If else statements can be chained together
+    if(myVariable < 10) {
+      console.log('Less than 10!')
+    } else if(myVariable == 10) {
+      console.log('Exactly 10!')
+    } else if(myVariable > 10) {
+      console.log('Greater than 10!')
+    }
+
+    // Loops can be used to repeatedly run code
+    // A common loop is the 'for' loop. This has an incrementor value, usually i, a condition that it will check and will only continue the loop if its true, and an incrementor, usually i++
+    // In this example, the loop will run 5 times with i starting at 0 and ending at 4. The index i will be logged each time the loop runs
+    // The loop will run fully in one frame, so if you were to have a loop that runs an infinite number of times (called an infinite loop), your program will crash.
+    for(let i = 0; i < 5; i++) {
+      console.log('The index is ' + i)
+    }
+
+    // Another common loop is the while loop. This does not have an incrementor, and will run as long as the condition is true.
+    // In this example, myVariable will be decremented by 3 and logged until myVariable is less than or equal to 5
+    while(myVariable > 5) {
+      myVariable -= 3
+      console.log(myVariable)
+    }
+
+    // You can nest code inside of the braces ( {} ) of other statements and loops (often referred to as code blocks)
+    for(let i = 0; i < 5; i++) {
+      if(i == 2) {
+        for(let j = 5; j > 0; j--) {
+          console.log(j)
+        }
+      } else {
+        console.log(i)
+      }
+    }
+
+    // In JavaScript, there are many different built-in data types. These are broken into two catagories: primitive and non-primitive.
+    // There are seven primitive data types:
+    Number     // Simply just a number
+    String     // Text
+    Boolean    // Can be either true or false
+    Null       // The intentional absence of any value
+    undefined  // An uninitialized variable (usually)
+    Symbol     // Often used as unique identifiers for object properties
+    BigInt     // A primitive that supports larger numbers at the cost of speed
+
+    // When it comes to non-primitive data types, there are many that are built into JavaScript, here are some common examples:
+    Object     // A collection of key-value pairs represented by { a: 1, b: 2, ... }
+    Array      // A collection of values indexed by non-negative integers starting at 0. Represented by [0, 1, 2, 3, 4]
+    Function   // A type of object used to define reusable blocks of code
+  </script>
+</body>
+</html>
